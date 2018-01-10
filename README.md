@@ -16,14 +16,20 @@
 ## singleTop:
 
 1.若不在栈顶，则与standard模式行为相同。
+
 2.若在栈顶，则不新建Activity，而调用`onNewIntent()`，并且，不会调用`onStart()`或`onRestart()`，只会调用`onResume()`。
 
 ## singleTask
 
 1.同一个栈中只有一个实例
+
 2.启动时会将标志设为 FLAG_ACTIVITY_NEW_TASK，此时会检查 affinity属性，若具有该属性的栈不存在，则新建栈，否则，将Activity加入已存在的栈。（这说明，不同应用的Activity可以在同一个栈中）
 
 
 ## singleInstance
 
 在Android系统中，只会有一个实例，并独占一个栈。
+
+## taskAffinity
+
+1.当 Activity的启动为FLAG_ACTIVITY_NEW_TASK时，会检查affinity属性。
