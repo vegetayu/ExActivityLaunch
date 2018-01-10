@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.capsule.exal.SingleTop_A_Activity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:id="@+id/btn_standard_a"
+        android:text="standard a"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:text="self"
+        android:layout_width="wrap_content"
+        android:id="@+id/btn_start_self"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
