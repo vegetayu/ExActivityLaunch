@@ -1,6 +1,6 @@
 ## Activity启动模式测试
 
-<img width="450" height="800" src="pictures/screen_shot1.jpeg"/>
+<img width="450" height="800" src="pictures/screen_shot1.png"/>
 
 > 用 adb shell dumpsys activity | grep com.capsule.exal | grep 'Run #[0-9]' 命令查看Activity栈
 
