@@ -10,6 +10,7 @@
       android:layout_width="0dp"
       android:layout_height="32dp"
       android:gravity="center|left"
+      app:layout_constraintHorizontal_weight="1"
       android:text="launch mode"
       android:textColor="#ff000000"
       app:layout_constraintLeft_toLeftOf="parent"
@@ -22,6 +23,7 @@
       android:id="@+id/tvLaunchTarget"
       android:layout_width="0dp"
       android:layout_height="32dp"
+      app:layout_constraintHorizontal_weight=".8"
       android:gravity="center|left"
       android:text="launch target"
       android:textColor="#ff000000"
@@ -36,8 +38,7 @@
       android:layout_width="0dp"
       android:layout_height="wrap_content"
       android:orientation="vertical"
-      app:layout_constraintLeft_toLeftOf="parent"
-      app:layout_constraintRight_toLeftOf="@+id/rgTarget"
+      app:layout_constraintLeft_toLeftOf="@+id/tvLaunchMode"
       app:layout_constraintTop_toBottomOf="@+id/tvLaunchMode"
       >
 
@@ -67,7 +68,7 @@
           android:id="@+id/btn_mode3"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:text="singleInstance"
+          android:text="singleInstance (Activity E)"
           />
 
     </RadioGroup>
@@ -78,9 +79,8 @@
       android:layout_width="0dp"
       android:layout_height="wrap_content"
       android:orientation="vertical"
-      app:layout_constraintLeft_toRightOf="@+id/rgMode"
-      app:layout_constraintRight_toRightOf="parent"
-      app:layout_constraintTop_toTopOf="@+id/rgMode"
+      app:layout_constraintLeft_toLeftOf="@+id/tvLaunchTarget"
+      app:layout_constraintTop_toBottomOf="@+id/tvLaunchTarget"
       >
 
         <RadioButton

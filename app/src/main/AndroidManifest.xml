@@ -21,6 +21,7 @@
         <activity android:name=".Activity_B" />
         <activity android:name=".Activity_C" />
         <activity android:name=".Activity_D" />
+        <activity android:name=".Activity_E" android:launchMode="singleInstance"/>
 
 
     </application>
