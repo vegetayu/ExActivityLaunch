@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  >
+
+    <TextView
+      android:id="@+id/tvLaunchMode"
+      android:layout_width="0dp"
+      android:layout_height="32dp"
+      android:gravity="center|left"
+      android:text="launch mode"
+      android:textColor="#ff000000"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toLeftOf="@+id/tvLaunchTarget"
+      app:layout_constraintTop_toTopOf="parent"
+      />
+
+
+    <TextView
+      android:id="@+id/tvLaunchTarget"
+      android:layout_width="0dp"
+      android:layout_height="32dp"
+      android:gravity="center|left"
+      android:text="launch target"
+      android:textColor="#ff000000"
+      app:layout_constraintLeft_toRightOf="@+id/tvLaunchMode"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      />
+
+
+    <RadioGroup
+      android:id="@+id/rgMode"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toLeftOf="@+id/rgTarget"
+      app:layout_constraintTop_toBottomOf="@+id/tvLaunchMode"
+      >
+
+        <RadioButton
+          android:id="@+id/btn_mode0"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:checked="true"
+          android:text="standard"
+          />
+
+        <RadioButton
+          android:id="@+id/btn_mode1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="singleTop"
+          />
+
+        <RadioButton
+          android:id="@+id/btn_mode2"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="singleTask"
+          />
+
+        <RadioButton
+          android:id="@+id/btn_mode3"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="singleInstance"
+          />
+
+    </RadioGroup>
+
+
+    <RadioGroup
+      android:id="@+id/rgTarget"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      app:layout_constraintLeft_toRightOf="@+id/rgMode"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/rgMode"
+      >
+
+        <RadioButton
+          android:id="@+id/btn_target0"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:checked="true"
+          android:text="Activity A"
+          />
+
+        <RadioButton
+          android:id="@+id/btn_target1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Activity B"
+          />
+
+        <RadioButton
+          android:id="@+id/btn_target2"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Activity C"
+          />
+
+        <RadioButton
+          android:id="@+id/btn_target3"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Activity D"
+          />
+
+    </RadioGroup>
+
+    <Button
+      android:id="@+id/btnStart"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:text="start activity"
+      android:textAllCaps="false"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/rgTarget"
+      />
+
+
+</android.support.constraint.ConstraintLayout>

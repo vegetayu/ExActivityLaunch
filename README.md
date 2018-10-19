@@ -1,5 +1,6 @@
+## Activity启动模式测试
 
-> 用 adb shell dumpsys activity | com.capsule.exal 命令查看Activity栈
+> 用 adb shell dumpsys activity | grep com.capsule.exal | grep 'Run #[0-9]' 命令查看Activity栈
 
 ## standard
 
