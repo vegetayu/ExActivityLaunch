@@ -1,12 +1,15 @@
 package com.capsule.exal
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
 import android.widget.Button
 import android.widget.RadioGroup
 
 
+@SuppressLint("Registered")
 open class BaseActivity : AppCompatActivity() {
   private var rgMode: RadioGroup? = null
   private var rgTarget: RadioGroup? = null
@@ -61,7 +64,12 @@ open class BaseActivity : AppCompatActivity() {
 }
 
 class Activity_A : BaseActivity()
-class Activity_B : BaseActivity()
+class Activity_B : BaseActivity(){
+  override fun onResume() {
+    super.onResume()
+    Log.i("vegeta","Activity B onResume")
+  }
+}
 class Activity_C : BaseActivity()
 class Activity_D : BaseActivity()
 class Activity_E : BaseActivity()
